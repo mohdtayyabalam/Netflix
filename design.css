@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+body {
+    background-color: black;
+    font-family: "Martel Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-image: url(Assests/main.jpg);
+    height: 70vh;
+    width: 100vw;
+    background-size: max(1500px, 100vw);
+    /* so that when we see the image in different device with different size it resizes properly which ever is larger applies automatically */
+    background-position: center center;
+    /* locks or sticks the image in the center */
+    background-repeat: no-repeat;
+    /* prevents from repeating the image or the element */
+    position: relative;
+    /* so that we are able to set the box property to absolute */
+}
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.69;
+    position: absolute;
+    /* so that it sticks to the main div */
+    top: 0;
+}
+
+nav {
+    max-width: 60vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+nav img {
+    color: red;
+    width: 130px;
+    position: relative;
+    /* to apply z-index */
+    z-index: 10;
+    /* it pops out the element */
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: "Martel Sans", sans-serif;
+    height: calc(100% - 62px);
+    /*subtracting the height of nav from the total height to remove the padding by using calc function */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    color: white;
+    gap: 20px;
+    padding: 0px 30px;
+    text-align: center;
+}
+
+.hero> :nth-child(1) {
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.seperation {
+    height: 8px;
+    background-color: rgb(70, 67, 67);
+    position: relative;
+    z-index: 20;
+}
+
+.btn {
+    padding: 3px 8px;
+    font-weight: 400;
+    background-color: white;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.btn-english {
+    background-color: rgba(10, 10, 10, 0.2);
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    /* when we hover over that button cursor changes */
+}
+
+.main input {
+    padding: 7px 101px 8px 14px;
+    font-size: 12px;
+    color: white;
+    border-radius: 4px;
+    font-weight: 900;
+    background-color: rgba(23, 23, 23, 0.7);
+    /*last alpha provides the opacity options*/
+    border: 1px solid rgba(247, 236, 236, 0.5);
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* styling sections below */
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+}
+
+@media screen and (max-width: 1300px) {
+
+    /* usind media query to define what happens when a particulat screen size reached */
+    .first {
+        flex-wrap: wrap;
+    }
+}
+
+.secimg {
+    position: relative;
+}
+
+.secimg img {
+    width: 555px;
+    /* using pixels so that it won't move with the screen resizing */
+    position: relative;
+    z-index: 10;
+
+}
+
+.secimg video {
+    position: absolute;
+    top: 106px;
+    right: 18px;
+    width: 462px;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+section.third .secimg video {
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    max-height: 47%;
+    position: absolute;
+    top: 9%;
+    left: 17%;
+}
+
+/* Frequently asked Question section below */
+
+.faq {
+    background: black;
+    color: white;
+    padding: 34px;
+}
+
+.faq h1 {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    color: white;
+}
+
+.faqbox {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    padding: 24px;
+    max-width: 60vw;
+    margin: 12px auto;
+    font-size: 24px;
+    transition: all 1s ease-out;
+}
+
+.faq h4 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.faq .butt {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.faq .butt input {
+    padding-right: 170px;
+    padding-left: 10px;
+    background-color: rgba(23, 23, 23, 0.7);
+    color: white;
+    border: 1px solid white;
+
+}
+
+
+/* footer starts below */
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 14px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1300px) {
+
+    /* usind media query to define what happens when a particulat screen size reached */
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    /* usind media query to define what happens when a particulat screen size reached */
+    .secimg img {
+        width: 301px;
+        /* using pixels so that it won't move with the screen resizing */
+    }
+
+    .secimg video {
+        width: 241px;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 13px;
+    }
+
+    nav{
+        max-width: 90vw;
+    }
+
+    .hero-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    
+    .faq h4 {
+        font-size: 32px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    .footer-item{
+        align-items: center;
+    }
+
+}
+.footer a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+footer .questions {
+    padding: 34px 0px;
+}
